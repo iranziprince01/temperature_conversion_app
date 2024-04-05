@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video Playlist</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <section class="reg">
+        <a href="index.html" class="logo">SkillHub</a>
+
+        <form action="search.html" method="post" class="search-form">
+          <input
+            type="text"
+            name="search_box"
+            required
+            placeholder="search a course here..."
+            maxlength="100"
+          />
+          <button type="submit" class="fas fa-search"></button>
+        </form>
+
+        <div class="icons">
+          <div id="menu-btn" class="fas fa-bars"></div>
+          <div id="search-btn" class="fas fa-search"></div>
+          <div id="user-btn" class="fas fa-user"></div>
+          <div id="toggle-btn" class="fas fa-sun"></div>
+        </div>
+
+        <div class="profile">
+          <img src="images/pic-1.jpg" class="image" alt="" />
+          <h3 class="name">Eric Rukundo</h3>
+          <p class="role">Student</p>
+          <a href="profile.html" class="btn">visit profile</a>
+          <div class="reg-btn">
+            <a href="login.html" class="option-btn">login</a>
+            <a href="signup.html" class="option-btn">signup</a>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <div class="side-bar">
+      <div id="close-btn">
+        <i class="fas fa-times"></i>
+      </div>
+
+      <div class="profile">
+        <img src="images/pic-1.jpg" class="image" alt="" />
+        <h3 class="name">Eric Rukundo</h3>
+        <p class="role">Student</p>
+        <a href="profile.html" class="btn">visit profile</a>
+      </div>
+
+      <nav class="navbar">
+        <a href="index.html"><i class="fas fa-home"></i><span>Home</span></a>
+        <a href="about.html"
+          ><i class="fas fa-paper-plane"></i><span>About Us</span></a
+        >
+        <a href="courses.html"
+          ><i class="fas fa-graduation-cap"></i><span>Courses</span></a
+        >
+        <a href="teachers.html"
+          ><i class="fas fa-chalkboard-user"></i><span>Teachers</span></a
+        >
+        <a href="contact.html"
+          ><i class="fas fa-headset"></i><span>Contact Us</span></a
+        >
+      </nav>
+    </div>
+
+    <section class="playlist-details">
+      <h1 class="heading">Playlist Details</h1>
+
+      <div class="row">
+        <div class="column">
+          <form action="" method="post" class="save-playlist">
+            <button type="submit">
+              <i class="far fa-bookmark"></i> <span>Save Playlist</span>
+            </button>
+          </form>
+
+          <div class="thumb">
+            <img src="images/thumb-6.png" alt="" />
+            <span>6 videos</span>
+          </div>
+        </div>
+        <div class="column">
+          <div class="tutor">
+            <img src="images/pic-2.jpg" alt="" />
+            <div>
+              <h3>Mahoro Diane</h3>
+              <span>21-01-2024</span>
+            </div>
+          </div>
+
+          <div class="details">
+            <h3>Cybersecurity Awareness</h3>
+            <p>
+              A crucial aspect of digital literacy that focuses on educating
+              individuals about the importance of protecting their online
+              information and digital assets from cyber threats. This includes
+              understanding common cybersecurity risks such as phishing,
+              malware, and data breaches, as well as learning best practices for
+              securing personal information and devices.
+            </p>
+            <a href="teacher_profile.html" class="inline-btn">visit profile</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="playlist-videos">
+      <h1 class="heading">Playlist Videos</h1>
+
+      <div class="box-container">
+        <a class="box" href="watch-video2.html">
+          <i class="fas fa-play"></i>
+          <img src="images/post-6-1.png" alt="" />
+          <h3>Basic Computer Skills (part 01)</h3>
+        </a>
+
+        <a class="box" href="watch-video1.html">
+          <i class="fas fa-play"></i>
+          <img src="images/post-6-2.png" alt="" />
+          <h3>Basic Computer Skills (part 02)</h3>
+        </a>
+
+        <a class="box" href="watch-video2.html">
+          <i class="fas fa-play"></i>
+          <img src="images/post-6-3.png" alt="" />
+          <h3>Basic Computer Skills (part 03)</h3>
+        </a>
+
+        <a class="box" href="watch-video3.html">
+          <i class="fas fa-play"></i>
+          <img src="images/post-6-4.png" alt="" />
+          <h3>Basic Computer Skills (part 04)</h3>
+        </a>
+
+        <a class="box" href="watch-video4.html">
+          <i class="fas fa-play"></i>
+          <img src="images/post-6-5.png" alt="" />
+          <h3>Basic Computer Skills (part 05)</h3>
+        </a>
+
+        <a class="box" href="watch-video6.html">
+          <i class="fas fa-play"></i>
+          <img src="images/post-6-6.png" alt="" />
+          <h3>Basic Computer Skills (part 06)</h3>
+        </a>
+      </div>
+    </section>
+
+    <footer class="footer">
+      &copy;Copyright &commat;2024 by <span>SkillHub</span> | all rights
+      reserved!
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

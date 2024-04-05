@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <section class="reg">
+        <a href="#" class="logo">SkillHub</a>
+      </section>
+    </header>
+
+    <div class="side-bar"></div>
+
+    <nav class="navbar"></nav>
+
+    <section class="form-container">
+      <form id="loginForm">
+        <h3>Login</h3>
+        <p>Email <span>*</span></p>
+        <input
+          type="email"
+          id="loginEmail"
+          name="email"
+          placeholder="enter your email..."
+          required
+          maxlength="55"
+          class="box"
+        />
+        <p>Password <span>*</span></p>
+        <input
+          type="password"
+          id="loginPassword"
+          name="pass"
+          placeholder="enter your password..."
+          required
+          maxlength="25"
+          class="box"
+        />
+        <button type="submit" onclick="submitLoginForm()" class="btn">
+          Login
+        </button>
+        <p>Don't have an account yet, <a href="signup.html">Signup</a></p>
+      </form>
+    </section>
+
+    <footer class="footer">
+      &copy;Copyright &commat;2024 by <span>SkillHub</span> | all rights
+      reserved!
+    </footer>
+
+    <script>
+      document
+        .getElementById("loginForm")
+        .addEventListener("submit", async (event) => {
+          event.preventDefault(); // Prevent the default form submission
+          const email = document.getElementById("loginEmail").value;
+          const password = document.getElementById("loginPassword").value;
+          const formData = {
+            email,
+            password,
+          };
+
+          try {
+            const response = await fetch(
+              "https://skillhub-02.onrender.com/user/signin",
+              {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+                body: JSON.stringify(formData),
+              }
+            );
+
+            if (response.ok) {
+              // Success handling
+              console.log("User logged in successfully!");
+              window.location.href = "index.html";
+              // Redirect the user or perform other actions upon successful login
+            } else {
+              // Handle non-success responses
+              console.error(
+                "Failed to log in:",
+                response.status,
+                response.statusText
+              );
+              // Optionally, display an error message to the user
+            }
+          } catch (error) {
+            // Handle network errors
+            console.error("Network error:", error);
+            // Optionally, display an error message to the user
+          }
+        });
+    </script>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
